@@ -19,4 +19,8 @@ createManifest
 
 addDependencies
 
+addAssets
+
 createJar
+
+deleteResiduals

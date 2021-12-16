@@ -1,3 +1,4 @@
+package test;
 import com.jme3.system.AppSettings;
 import myGame.Game;
 

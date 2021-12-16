@@ -14,6 +14,7 @@ function makeOutputDir() {
     cd ${outputJARDir}
     mkdir ${outputJAR}
     mkdir ${outputJAR}'/dependencies'
+    mkdir ${outputJAR}'/dependencies/assets'
 }
 
 function createManifest() {
@@ -25,27 +26,44 @@ function createManifest() {
 
 function addDependencies() {
     dependencies=${workingDir}'/code/java/dependencies/*'
-    cp ${dependencies} ${outputJARDir}''${outputJAR}'/dependencies'
+    cp -r ${dependencies} ${outputJARDir}''${outputJAR}'/dependencies'
     files=${classpath}''"`ls ${outputJARDir}''${outputJAR}'/dependencies/*'`"
     echo ${files} >> ${outputJARDir}''${outputJAR}'/Manifest.mf'
 }
 
+function addAssets() {
+    assets=${workingDir}'/code/java/assets/*'
+    assetsFolder=${outputJARDir}''${outputJAR}'/dependencies/assets'
+    # copy to an asset folder
+    cp -r $assets $assetsFolder
+    cd ${outputJARDir}''${outputJAR}'/dependencies'
+    # zip the assets into a jar file
+    zip -r assets.jar . -i 'assets/*'
+    # remove the assets folder
+    rm -rf 'assets'
+}
+
 function createJar() {
     manifestFile=${outputJARDir}''${outputJAR}'/Manifest.mf'
-    javaClasses=${workingDir}'/build/.buildJava/*.class'
+    javaClasses=${workingDir}'/build/.buildJava/*'
     nativeLibs=${workingDir}'/shared/*.so'
 
     cd ${outputJARDir}''${outputJAR}
 
     cp ${manifest} ${outputJARDir}''${outputJAR}
-    cp ${javaClasses} ${outputJARDir}''${outputJAR}
+    cp -r ${javaClasses} ${outputJARDir}''${outputJAR}
     cp ${nativeLibs} ${outputJARDir}''${outputJAR}
 
     
-    classes='*.class'
+    classes='*/*.class'
     libs='*.so'
-    dependenciesFiles='dependencies/*.jar'
     
-    jar cmf ${manifestFile} ${outputJAR}'.jar' ${classes} ${libs} ${dependenciesFiles}
+    jar cmf ${manifestFile} ${outputJAR}'.jar' ${classes} ${libs}
 
+}
+
+function deleteResiduals() {
+    manifestFile=(${outputJARDir}''${outputJAR}'/*.mf')
+    classFiles=(${outputJARDir}''${outputJAR}'/*/*.class')
+    rm $manifestFile $classFiles
 }
