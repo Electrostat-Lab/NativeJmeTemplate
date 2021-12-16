@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: TestJni
-Class-Path: dependencies/game.jar dependencies/jinput-2.0.9.jar dependencies/jinput-2.0.9-natives-all.jar dependencies/jme3-core-3.4.0-stable.jar dependencies/jme3-desktop-3.4.0-stable.jar dependencies/jme3-effects-3.4.0-stable.jar dependencies/jme3-lwjgl-3.4.0-stable.jar dependencies/lwjgl-2.9.3.jar dependencies/lwjgl-platform-2.9.3-natives-linux.jar dependencies/lwjgl-platform-2.9.3-natives-osx.jar dependencies/lwjgl-platform-2.9.3-natives-windows.jar
