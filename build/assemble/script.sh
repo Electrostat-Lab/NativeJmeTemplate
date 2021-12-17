@@ -27,8 +27,10 @@ function createManifest() {
 function addDependencies() {
     dependencies=${workingDir}'/code/java/dependencies/*'
     cp -r ${dependencies} ${outputJARDir}''${outputJAR}'/dependencies'
-    files=${classpath}''"`ls ${outputJARDir}''${outputJAR}'/dependencies/*'`"
-    echo ${files} >> ${outputJARDir}''${outputJAR}'/Manifest.mf'
+    cd ${outputJARDir}''${outputJAR}'/'
+    jars=('dependencies/*.jar') 
+    printf '%s ' ${classpath} >> ${outputJARDir}''${outputJAR}'/Manifest.mf'
+    printf ' %s \n' ${jars[0]} >> ${outputJARDir}''${outputJAR}'/Manifest.mf'
 }
 
 function addAssets() {

@@ -30,7 +30,9 @@ function compile() {
     gcc -fPIC ${nativeSources} -shared  -o ${clibName} \
                 -I'/usr/lib/jvm/java-11-openjdk-amd64/include' \
                 -I'/usr/lib/jvm/java-11-openjdk-amd64/include/linux' \
-                -I${workDir}'/code/natives/includes'
+                -I${workDir}'/code/natives/includes' \
+                
+    rm $nativeSources
 } 
 
 function setJavaLibSource() {
