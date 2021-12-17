@@ -8,11 +8,8 @@
 
 echo "Compiling the project"
 
-source clean.sh
 source buildJava.sh
 source buildNatives.sh
-
-
 
 copyJavaSources
 
@@ -23,8 +20,4 @@ moveHeaders
 copyNativeSources
 
 compile
-
-
-
-
 
