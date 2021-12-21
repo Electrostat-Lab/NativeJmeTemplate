@@ -87,6 +87,9 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
 ## Ref : 
 - https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html#wp16656
 - https://www.ibm.com/docs/en/i/7.1?topic=api-example-java-invocation
+- https://www.ibm.com/docs/en/sdk-java-technology/8?topic=applications-example-using-shared-libraries-linux
+- https://developer.ibm.com/articles/j-jni/
+
 
 ## How to use this template : 
 This template compiles and builds a jme3 game using javac commands besides also compiling and generating C headers against native java methods using Jni.
