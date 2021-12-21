@@ -60,7 +60,7 @@ function createJar() {
     classes='*/*.class'
     libs='*.so'
     
-    jar cmf ${manifestFile} ${outputJAR}'.jar' ${classes} ${libs}
+    $command cmf ${manifestFile} ${outputJAR}'.jar' ${classes} ${libs}
 
 }
 

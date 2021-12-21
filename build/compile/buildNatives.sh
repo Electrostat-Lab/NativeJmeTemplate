@@ -27,7 +27,7 @@ function compile() {
     
     nativeSources=${workDir}'/build/.buildNatives/*'
     # append -lwiringPi for raspberry wiringPi includes
-    gcc -fPIC ${nativeSources} -shared  -o ${clibName} \
+    g++ -fPIC ${nativeSources} -shared  -o ${clibName} \
                 -I'/usr/lib/jvm/java-11-openjdk-amd64/include' \
                 -I'/usr/lib/jvm/java-11-openjdk-amd64/include/linux' \
                 -I${workDir}'/code/natives/includes' \

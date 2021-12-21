@@ -8,5 +8,5 @@
 
 # define work directory
 workDir=('/home/twisted/GradleProjects/NativeJmeTemplate')
-
+command=/home/twisted/jdk1.8.0_201/bin/javac
 clibName=('libTestJni.so')

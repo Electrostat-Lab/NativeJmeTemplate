@@ -15,6 +15,38 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_test_TestJni_getName
   (JNIEnv *, jclass);
 
+/*
+ * Class:     test_TestJni
+ * Method:    main
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_test_TestJni_main
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     test_TestJni
+ * Method:    initVM
+ * Signature: ()I
+ */
+JNIEXPORT jint JNICALL Java_test_TestJni_initVM
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     test_TestJni
+ * Method:    run
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_test_TestJni_run
+  (JNIEnv *, jclass);
+
+/*
+ * Class:     test_TestJni
+ * Method:    destroy
+ * Signature: ()V
+ */
+JNIEXPORT void JNICALL Java_test_TestJni_destroy
+  (JNIEnv *, jclass);
+
 #ifdef __cplusplus
 }
 #endif
