@@ -11,5 +11,5 @@ source ${workingDir}'/build/assemble/variables.sh'
 
 function run() {
     cd ${workingDir}'/output/'${outputJAR}
-    $command -jar -Djava.library.path=. 'TestJni.jar'
+    $runCommand -jar -Djava.library.path=. 'TestJni.jar'
 }

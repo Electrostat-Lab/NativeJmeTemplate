@@ -7,4 +7,4 @@
 #*#
 
 workingDir='/home/twisted/GradleProjects/NativeJmeTemplate'
-command=/home/twisted/jdk1.8.0_201/bin/java
+runCommand=/home/twisted/jdk1.8.0_201/bin/java

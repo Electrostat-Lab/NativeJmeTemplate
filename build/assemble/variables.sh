@@ -10,4 +10,5 @@ workingDir='/home/twisted/GradleProjects/NativeJmeTemplate'
 outputJAR='TestJni'
 manifest='Manifest-Version: 1.0'
 mainclass='Main-Class: test.TestJni'
+command=/home/twisted/jdk1.8.0_201/bin/jar
 classpath='Class-Path: dependencies'
