@@ -84,6 +84,10 @@ Branch 'master' set up to track remote branch 'master' from 'https://github.com/
 
 ![Screenshot at 2021-12-16 09-05-30](https://user-images.githubusercontent.com/60224159/146333966-b2ac66a4-8893-4530-adcd-cd7246b9e1c7.png)
 
+## Ref : 
+- https://docs.oracle.com/javase/7/docs/technotes/guides/jni/spec/functions.html#wp16656
+- https://www.ibm.com/docs/en/i/7.1?topic=api-example-java-invocation
+
 ## How to use this template : 
 This template compiles and builds a jme3 game using javac commands besides also compiling and generating C headers against native java methods using Jni.
 The crystal usage of this template is when building simple native interfaces for our games, like using wiringPi on the RPI to control our jme3 input interfaces using GPIOs.
